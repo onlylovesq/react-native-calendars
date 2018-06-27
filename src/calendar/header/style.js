@@ -12,7 +12,8 @@ export default function(theme = {}) {
       paddingLeft: 10,
       paddingRight: 10,
       alignItems: "center",
-      marginBottom: 18
+      marginBottom: 20,
+      marginTop: 20
     },
     monthText: {
       fontSize: appStyle.textMonthFontSize,
