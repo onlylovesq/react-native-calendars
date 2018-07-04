@@ -35,11 +35,15 @@ class Day extends Component {
 
   shouldComponentUpdate(nextProps) {
     // return true;
+
+    if (nextProps.markMessage) {
+      return true;
+    }
     return shouldUpdate(this.props, nextProps, [
       'state',
       'children',
       'marking',
-      'markMessages',
+      // 'markMessages',
       'onPress',
       'onLongPress',
     ]);
@@ -110,7 +114,7 @@ class Day extends Component {
           </Text>
           {dot}
         </TouchableOpacity>
-        {showText}
+        {!isDisabled && showText}
       </View>
     );
   }
